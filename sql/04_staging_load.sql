@@ -10,6 +10,7 @@ TRUNCATE TABLE stg_country;
 TRUNCATE TABLE stg_league;
 TRUNCATE TABLE stg_team;
 TRUNCATE TABLE stg_player;
+TRUNCATE TABLE stg_player_attributes;
 TRUNCATE TABLE stg_team_attributes;
 
 -- Reload from raw tables
@@ -28,6 +29,10 @@ FROM team;
 INSERT INTO stg_player
 SELECT *
 FROM player;
+
+INSERT INTO stg_player_attributes
+SELECT *
+FROM player_attributes;
 
 INSERT INTO stg_team_attributes
 SELECT *
